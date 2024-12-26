@@ -1,0 +1,8 @@
+<customer>
+ <address>Chicago</address>
+ <name>Jack Donner</name>
+ <company category="Silver">
+  <name>Marigold</name>
+  <location>Denver</location>
+ </company>
+</customer>

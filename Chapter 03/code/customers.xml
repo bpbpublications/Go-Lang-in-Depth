@@ -1,0 +1,18 @@
+<customers>
+   <customer >
+   
+     <name> John Smith </name>
+	 
+	 <address>Atlanta</address>
+	 
+	 <company category="Gold">
+	      <name> Microsoft</name>
+		  <location>Seattle</location>
+	 </company>
+     
+   </customer>
+
+
+
+
+</customers>

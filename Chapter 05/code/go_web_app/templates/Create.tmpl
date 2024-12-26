@@ -1,0 +1,24 @@
+{{ define "Create" }}
+  {{ template "Header" }}
+    {{ template "Menu"  }}
+<br>
+    <h1>Create Employee</h1>
+  <br>
+  <br>
+  <form method="post" action="/insert">
+    Employee Name: <input type="text" name="name" placeholder="name" autofocus/>
+    <br>
+    <br>
+    SSN: <input type="text" name="ssn" placeholder="ssn"/>
+    <br>
+    <br>
+    Designation: <input type="text" name="designation" placeholder="designation"/>
+    <br>
+    <br>
+    Department: <input type="text" name="department" placeholder="department"/>
+    <br>
+    <br>
+    <input type="submit" value="Create Employee"/>
+   </form>
+{{ template "Footer" }}
+{{ end }}

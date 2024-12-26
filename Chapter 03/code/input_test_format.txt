@@ -1,0 +1,1 @@
+This is to test writing a text formatted file Code demonstrates writing and reading a text file Go lang.

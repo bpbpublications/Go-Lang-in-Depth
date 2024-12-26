@@ -1,0 +1,33 @@
+{{ define "View" }}
+  {{ template "Header" }}
+    {{ template "Menu"  }}
+    <br>
+        <h1>View Employee</h1>
+      <br>
+      <br>
+<table border="1">
+<tr>
+<td>EmployeeId</td>
+<td>Name</td>
+<td>SSN</td>
+<td>Department</td>
+<td>Designation</td>
+<td>Update</td>
+<td>Delete</td>
+</tr>
+{{ if . }}
+       {{ range . }}
+<tr>
+<td>{{ .EmployeeId }}</td>
+<td>{{ .EmployeeName }}</td>
+<td>{{ .SSN }}</td>
+<td>{{ .Department }}</td>
+<td>{{ .Designation }}</td>
+<td><a href="/delete?id={{.EmployeeId}}" onclick="return confirm('Are you sure you want to delete?');">Delete</a> </td>
+<td><a href="/update?id={{.EmployeeId}}">Update</a> </td>
+</tr>
+{{ end }}
+     {{ end }}
+</table>
+{{ template "Footer" }}
+{{ end }}

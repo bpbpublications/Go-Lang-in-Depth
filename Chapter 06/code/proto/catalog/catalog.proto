@@ -1,0 +1,56 @@
+
+syntax = "proto3";
+
+option go_package = "gobook/grpc/catalog";
+option java_multiple_files = true;
+option java_package = "go.book.catalog";
+option java_outer_classname = "CatalogProto";
+
+package catalog;
+
+
+service Catalog {
+
+  rpc GetProduct(ProductSpec) returns (Product) {}
+
+
+  rpc ProductList(Category) returns (stream Product) {}
+
+
+  rpc RecordProduct(stream ProductSpec) returns (Product) {}
+
+
+  rpc ProductChat(stream ProductSpecNote) returns (stream ProductSpecNote) {}
+}
+
+message Product {
+  string name = 1;
+  
+  string image = 2;
+  
+  string catname = 3;
+
+}
+
+message Category {
+
+   string name = 1;
+}
+
+message ProductSpec {
+
+   string name = 1;
+   
+
+}
+
+
+
+message ProductSpecNote {
+
+ Category cat = 1;
+
+ ProductSpec spec = 2;
+}
+
+

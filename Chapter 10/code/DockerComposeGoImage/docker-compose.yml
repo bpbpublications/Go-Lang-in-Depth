@@ -1,0 +1,6 @@
+version: '2'
+services:
+  first-docker-compose-go:
+    build: .
+    environment:
+      - TEST_ENV=test

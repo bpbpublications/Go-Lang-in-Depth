@@ -1,0 +1,34 @@
+{{ define "Home" }}
+  {{ template "Header" }}
+    {{ template "Menu"  }}
+    <h2> Employees </h2>
+    <table border="1">
+      <thead>
+      <tr>
+        <td>Employee ID</td>
+        <td>Employee Name</td>
+        <td>SSN</td>
+		<td>Designation</td>
+		<td>Department</td>
+        <td>View</td>
+        <td>Update</td>
+        <td>Delete</td>
+      </tr>
+       </thead>
+       <tbody>
+    {{ range . }}
+      <tr>
+        <td>{{ .EmployeeId }}</td>
+        <td> {{ .EmployeeName }} </td>
+        <td>{{ .SSN }} </td>
+		<td>{{ .Designation }} </td>
+		<td>{{ .Department }} </td>
+        <td><a href="/view?id={{ .EmployeeId }} ">View</a></td>
+        <td><a href="/update?id={{ .EmployeeId }} ">Update</a></td>
+        <td><a href="/delete?id={{ .EmployeeId }} " onclick="return confirm('Are you sure you want to delete ?');">Delete</a><td>
+      </tr>
+    {{ end }}
+       </tbody>
+    </table>
+  {{ template "Footer" }}
+{{ end }}
